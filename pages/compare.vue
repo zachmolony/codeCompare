@@ -40,14 +40,14 @@ export default {
 .page_content {
   margin-left: 25vw;
   max-width: 80vw;
-  margin-top: 15vh;
+  margin-top: 9vh;
 }
 
 .search-container {
   position: absolute;
   margin-left: 10vw;
   max-width: 20vw;
-  margin-top: 18vh;
+  margin-top: 10vh;
 }
 
 .title {
