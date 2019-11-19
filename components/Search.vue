@@ -7,45 +7,57 @@
                 <strong>Language</strong><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    Javascript
+                </label><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    Python
+                </label><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    HTML/CSS
+                </label><br>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    C++
+                </label><br>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Java
+                </label><br>
             </div>
             <div class="content">
                 <strong>Proficiency</strong><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    Beginner
+                </label><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    Intermediate
+                </label><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    Advanced
+                </label><br>
             </div>
             <div class="content">
                 <strong>Learning Style</strong><br>
                 <label class="checkbox">
                     <input type="checkbox">
                     Kinestetic
-                </label>
+                </label><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
-                </label>
+                    Visual
+                </label><br>
                 <label class="checkbox">
                     <input type="checkbox">
-                    Remember me
+                    Auditory
+                </label><br>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Reading/Writing
                 </label>
             </div>
         </div>
@@ -60,6 +72,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.content
-    margin-top: -20px !important
+.subtitle
+    margin-bottom: 0px !important
 </style>
