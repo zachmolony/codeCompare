@@ -1,61 +1,53 @@
 <template>
-    <div>
-      <Navbar />
-<div class="search-container">
-        <Search />
-      </div>
-      <div class="page_content">
-        <div class="content">
-        
-          <div class="columns">
-            <div class="column">
-              <Card />
-            </div>
-            <div class="column">
-              <Card />
-            </div>
-            <div class="column">
-              <Card />
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
+  <div>
+    <Navbar />
+
+    <div class="search-container">
+      <Search />
     </div>
+
+    <div class="page_content">
+      <div class="content">
+        <Results />
+      </div>
+    </div>
+
+
+  </div>
 </template>
 
 <script>
 import Navbar from '~/components/Navbar.vue'
 import Card from '~/components/Card.vue'
 import Search from '~/components/Search.vue'
+import Results from '~/components/Results.vue'
 
 export default {
   components: {
     Navbar,
     Card,
-    Search
+    Search,
+    Results
   }
 }
 </script>
 
 <style scoped>
+.logo-text {
+  position: absolute;
+}
+
 .page_content {
-  margin-left: 10vw;
+  margin-left: 25vw;
   max-width: 80vw;
-  margin-top: 20vh;
+  margin-top: 15vh;
 }
 
 .search-container {
   position: absolute;
   margin-left: 10vw;
   max-width: 20vw;
-  margin-top: 20vh;
-}
-
-.content {
-  margin-top: 20vh;
-  margin-left: 22vw;
+  margin-top: 18vh;
 }
 
 .title {
