@@ -23,16 +23,22 @@
     <div class="info">
       <div class="columns">
         <div class="column">
-          First column
+          <div class="three">
+            <img src="~/assets/logo.png" alt="" class="image is-64x64">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad adipisci quo possimus quasi quibusdam.</p>
+          </div>
         </div>
         <div class="column">
-          Second column
+          <div class="three">
+            <img src="~/assets/logo.png" alt="" class="image is-64x64">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad adipisci quo possimus quasi quibusdam.</p>
+          </div>
         </div>
         <div class="column">
-          Third column
-        </div>
-        <div class="column">
-          Fourth column
+          <div class="three">
+            <img src="~/assets/logo.png" alt="" class="image is-64x64">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad adipisci quo possimus quasi quibusdam.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -58,6 +64,18 @@ export default {
 </script>
 
 <style>
+.three {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.three img {
+  margin: auto auto 4vh;
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -94,8 +112,14 @@ export default {
   padding-top: 15px;
 }
 
+.links * {
+  margin-left: 5px;
+}
+
 .info {
-  min-width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
   min-height: 60vh;
 }
 
