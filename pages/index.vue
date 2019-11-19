@@ -2,7 +2,7 @@
   <div>
     <div class="container hero is-primary is-bold">
       <div class="hero-content">
-        <img src="../assets/logo.png" alt="" height="30vh">
+        <img class="logo-main" src="../assets/logo.png" alt="">
         <h1 class="title has-text-grey">
           CodeCompare
         </h1>
@@ -107,5 +107,9 @@ footer {
 a {
   color: white;
   text-decoration-line: underline;
+}
+
+.logo-main {
+  height: 30vh;
 }
 </style>
