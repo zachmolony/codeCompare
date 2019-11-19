@@ -1,30 +1,67 @@
 <template>
     <div>
       <Navbar />
+<div class="search-container">
+        <Search />
+      </div>
+      <div class="page_content">
+        <div class="content">
+        
+          <div class="columns">
+            <div class="column">
+              <Card />
+            </div>
+            <div class="column">
+              <Card />
+            </div>
+            <div class="column">
+              <Card />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      
+      
+
+      
+      
+      
     </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
 import Navbar from '~/components/Navbar.vue'
+import Card from '~/components/Card.vue'
+import Search from '~/components/Search.vue'
 
 export default {
   components: {
-    Logo,
-    Navbar
+    Navbar,
+    Card,
+    Search
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #41816828;
+<style scoped>
+.page_content {
+  margin-left: 10vw;
+  max-width: 80vw;
+  margin-top: 20vh;
+}
+
+.search-container {
+  position: absolute;
+  margin-left: 10vw;
+  max-width: 20vw;
+  margin-top: 20vh;
+}
+
+.content {
+  margin-top: 20vh;
+  margin-left: 22vw;
 }
 
 .title {
@@ -45,7 +82,4 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
-}
 </style>
