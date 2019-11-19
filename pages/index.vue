@@ -2,7 +2,7 @@
   <div>
     <div class="container hero is-primary is-bold">
       <div class="hero-content">
-        <logo />
+        <img src="../assets/logo.png" alt="" height="30vh">
         <h1 class="title has-text-grey">
           CodeCompare
         </h1>
@@ -50,11 +50,9 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
   components: {
-    Logo
+    
   }
 }
 </script>
