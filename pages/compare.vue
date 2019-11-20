@@ -38,19 +38,23 @@ export default {
   },
   created() {
     console.log("read............")
-    let ref = fireDb.collection('CodeCompare').doc('courses');
-    let getDoc = ref.get()
-      .then(doc => {
-        if (!doc.exists) {
-          console.log('No such document!');
-        } else {
-          console.log('Document data:', doc.data());
-          this.courses = doc.data();
+    fireDb.collection('Courses').get().then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        console.log(doc.data());
+        const data = {
+          'id': doc.id,
+          'date': doc.data().date,
+          'description': doc.data().description,
+          'img': doc.data().img,
+          'language': doc.data().language,
+          'link': doc.data().link,
+          'proficiency': doc.data().proficiency,
+          'rating': doc.data().rating,
+          'title': doc.data().title
         }
+        this.courses.push(data)
       })
-      .catch(err => {
-        console.log('Error getting document', err);
-      });
+    })
   }
 }
 </script>
