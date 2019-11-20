@@ -21,7 +21,9 @@ import Navbar from '~/components/Navbar.vue'
 import Card from '~/components/Card.vue'
 import Search from '~/components/Search.vue'
 import Results from '~/components/Results.vue'
+import {fireDb} from '~/plugins/firebase.js'
 import Vue from "vue"
+
 export default {
   components: {
     Navbar,
@@ -29,29 +31,26 @@ export default {
     Search,
     Results
   },
-  mounted: function() {
-    Vue.nextTick(() => {
-      readFromFirestore()
-    })
-  },
-  methods: {
-    async readFromFirestore() {
-        const ref = fireDb.collection("CodeCompare").doc("test")
-        let snap
-        try {
-          snap = await ref.get()
-        } catch (e) {
-          // TODO: error handling
-          console.error(e)
-        }
-        console.log(snap.data().text)
-      }
-  },
   data() {
     return {
       courses: this.$store.state.courses,
     }
   },
+  created() {
+    console.log("read............")
+    let ref = fireDb.collection('CodeCompare').doc('courses');
+    let getDoc = ref.get()
+      .then(doc => {
+        if (!doc.exists) {
+          console.log('No such document!');
+        } else {
+          console.log('Document data:', doc.data());
+        }
+      })
+      .catch(err => {
+        console.log('Error getting document', err);
+      });
+  }
 }
 </script>
 

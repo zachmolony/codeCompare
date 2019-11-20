@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-// let cart = window.localStorage.getItem('cart');  
+// let cart = window.localStorage.getItem('cart');   
 
 const createStore = () => {
   return new Vuex.Store({
