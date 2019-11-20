@@ -8,6 +8,7 @@ Vue.use(Vuex)
 const createStore = () => {
   return new Vuex.Store({
     state: {
+      searchFilter: [],
       courses: [{
           courseID: 1,
           img: 'https://firebasestorage.googleapis.com/v0/b/darklab2037.appspot.com/o/Hoodie_Green.png?alt=media&token=88434e76-11b4-4f12-ae73-a4d1682ddcb8',
@@ -31,8 +32,9 @@ const createStore = () => {
       ]
     },
     mutations: {
-      updatePage(state, pageName) {
-        state.page = pageName;
+      updateSearchFilter(state, searchFilter) {
+        console.log("updated terms")
+        state.searchFilter = searchFilter;
       },
       cartPersistence(state) {
         window.localStorage.setItem('cart', JSON.stringify(state.cart));
