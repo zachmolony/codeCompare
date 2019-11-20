@@ -6,23 +6,23 @@
             <div class="content">
                 <strong>Language</strong><br>
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="js" value="Javascript" v-model="searchFilter">
                     Javascript
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="python" value="Python" v-model="searchFilter">
                     Python
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="html/css" value="HTML/CSS" v-model="searchFilter">
                     HTML/CSS
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="c++" value="C++" v-model="searchFilter">
                     C++
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="java" value="Java" v-model="searchFilter">
                     Java
                 </label><br>
             </div>
@@ -59,6 +59,7 @@
                     <input type="checkbox">
                     Reading/Writing
                 </label>
+                {{searchFilter}}
             </div>
         </div>
     </article>
