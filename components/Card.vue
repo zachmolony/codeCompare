@@ -17,9 +17,9 @@
         <div class="ccontent">
           {{ course.description }} <br>
           <div class="rating">
-            <img src="../assets/like.png" alt="">
+            <img class="" v-on="{click: doot}" v-bind:class="{like: updooted}" src="../assets/like.png" alt="">
             <p class="has-text-weight-bold is-size-5 has-text-success "> {{ course.rating }}</p>
-            <img src="../assets/dislike.png" alt="">
+            <img class="dislike" v-on="{click: doot}" v-bind:class="{dislike_colour: updooted}" src="../assets/like.png" alt="">
           </div>
           <time class="is-size-7" datetime="2016-1-1"> {{ course.date }}</time>
         </div>
@@ -31,7 +31,20 @@
 <script>
 export default {
     name: 'Card',
-    props: ["course"]
+    props: ["course"],
+    data() {
+      return {
+        updooted: false
+      }
+    },
+    methods: {
+      doot() {
+        this.updooted = !this.updooted
+      },
+      downdoot() {
+        this.downdooted = !this.downdooted
+      }
+    }
 }
 </script>
 
@@ -61,4 +74,13 @@ a
 .rating > img
     width: auto
     height: 30px
+
+.like
+  filter: invert(61%) sepia(51%) saturate(671%) hue-rotate(88deg) brightness(98%) contrast(90%)
+
+.dislike_colour
+  filter: invert(28%) sepia(92%) saturate(2153%) hue-rotate(331deg) brightness(112%) contrast(101%)
+
+.dislike
+  transform: rotate(180deg)
 </style>
