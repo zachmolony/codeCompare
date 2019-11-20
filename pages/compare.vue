@@ -33,7 +33,7 @@ export default {
   },
   data() {
     return {
-      courses: this.$store.state.courses,
+      courses: []
     }
   },
   created() {
@@ -45,6 +45,7 @@ export default {
           console.log('No such document!');
         } else {
           console.log('Document data:', doc.data());
+          this.courses = doc.data();
         }
       })
       .catch(err => {
