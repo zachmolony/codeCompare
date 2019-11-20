@@ -68,7 +68,17 @@
 
 <script>
 export default {
-    name: 'Search'
+    name: 'Search',
+    data() {
+      return {
+        searchFilter: []
+      }
+    },
+    watch: {
+        searchFilter: function(){
+            this.$store.commit('updateSearchFilter', this.searchFilter)
+        }
+    }
 }
 </script>
 
