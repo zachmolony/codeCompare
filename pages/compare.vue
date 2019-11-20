@@ -8,7 +8,7 @@
 
     <div class="page_content">
       <div class="content">
-        <Results />
+        <Results v-bind:courses="courses"/>
       </div>
     </div>
 
@@ -28,7 +28,12 @@ export default {
     Card,
     Search,
     Results
-  }
+  },
+  data() {
+    return {
+      courses: this.$store.state.courses
+    }
+  },
 }
 </script>
 

@@ -3,26 +3,25 @@
     <div class="card">
       <div class="card-image">
         <figure class="image">
-          <img src="../assets/cc-logo.jpeg" class="card-img">
+          <img v-bind:src="course.img" class="card-img">
         </figure>
       </div>
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <p class="title is-4">Javascript</p>
-            <p class="subtitle is-6"><a href="https://codecademy.com">codecademy.com</a></p>
+            <p class="title is-4"> {{ course.language }}</p>
+            <p class="subtitle is-6"><a> {{ course.link }}</a></p>
           </div>
         </div>
 
         <div class="ccontent">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Phasellus nec iaculis mauris. <br>
+          {{ course.description }} <br>
           <div class="rating">
             <img src="../assets/like.png" alt="">
-            <p class="has-text-weight-bold is-size-5 has-text-success ">+30</p>
+            <p class="has-text-weight-bold is-size-5 has-text-success "> {{ course.rating }}</p>
             <img src="../assets/dislike.png" alt="">
           </div>
-          <time class="is-size-7" datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          <time class="is-size-7" datetime="2016-1-1"> {{ course.date }}</time>
         </div>
       </div>
     </div>
@@ -31,7 +30,8 @@
 
 <script>
 export default {
-    name: 'Card'
+    name: 'Card',
+    props: ["course"]
 }
 </script>
 
