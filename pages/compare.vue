@@ -21,7 +21,7 @@ import Navbar from '~/components/Navbar.vue'
 import Card from '~/components/Card.vue'
 import Search from '~/components/Search.vue'
 import Results from '~/components/Results.vue'
-
+import Vue from "vue"
 export default {
   components: {
     Navbar,
@@ -29,9 +29,27 @@ export default {
     Search,
     Results
   },
+  mounted: function() {
+    Vue.nextTick(() => {
+      readFromFirestore()
+    })
+  },
+  methods: {
+    async readFromFirestore() {
+        const ref = fireDb.collection("CodeCompare").doc("test")
+        let snap
+        try {
+          snap = await ref.get()
+        } catch (e) {
+          // TODO: error handling
+          console.error(e)
+        }
+        console.log(snap.data().text)
+      }
+  },
   data() {
     return {
-      courses: this.$store.state.courses
+      courses: this.$store.state.courses,
     }
   },
 }

@@ -59,7 +59,6 @@
                     <input type="checkbox">
                     Reading/Writing
                 </label>
-                {{searchFilter}}
             </div>
         </div>
     </article>
