@@ -14,7 +14,7 @@
                     Python
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox" id="html/css" value="HTML/CSS" v-model="searchFilter">
+                    <input type="checkbox" id="html/css" value="HTML" v-model="searchFilter">
                     HTML/CSS
                 </label><br>
                 <label class="checkbox">
@@ -22,8 +22,8 @@
                     C++
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox" id="java" value="Java" v-model="searchFilter">
-                    Java
+                    <input type="checkbox" id="c#" value="C#" v-model="searchFilter">
+                    C#
                 </label><br>
             </div>
             <div class="content">
