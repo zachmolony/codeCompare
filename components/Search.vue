@@ -14,7 +14,7 @@
                     Python
                 </label><br>
                 <label class="checkbox">
-                    <input type="checkbox" id="html/css" value="HTML" v-model="searchFilter">
+                    <input type="checkbox" id="html" value="HTML" v-model="searchFilter">
                     HTML/CSS
                 </label><br>
                 <label class="checkbox">
