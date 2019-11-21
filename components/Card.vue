@@ -9,17 +9,17 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <p class="title is-4"> {{ course.language }}</p>
-            <p class="subtitle is-6"><a> {{ course.link }}</a></p>
+            <p class="title is-5"> {{ course.title }}</p>
+            <p class="subtitle is-6"><a :href="course.link"> {{ course.link }}</a></p>
           </div>
         </div>
 
         <div class="ccontent">
           {{ course.description }} <br>
           <div class="rating">
-            <img class="" v-on="{click: doot}" v-bind:class="{like: updooted}" src="../assets/like.png" alt="">
+            <img class="arrow" v-on="{click: doot}" v-bind:class="{like: updooted}" src="../assets/like.png" alt="">
             <p class="has-text-weight-bold is-size-5 has-text-success "> {{ course.rating }}</p>
-            <img class="dislike" v-on="{click: doot}" v-bind:class="{dislike_colour: updooted}" src="../assets/like.png" alt="">
+            <img class="arrow dislike" v-on="{click: downdoot}" v-bind:class="{dislike_colour: downdooted}" src="../assets/like.png" alt="">
           </div>
           <time class="is-size-7" datetime="2016-1-1"> {{ course.date }}</time>
         </div>
@@ -34,7 +34,8 @@ export default {
     props: ["course"],
     data() {
       return {
-        updooted: false
+        updooted: false,
+        downdooted: false
       }
     },
     methods: {
@@ -62,6 +63,8 @@ a
 .card-img
     padding-top: 2em
     max-width: 20vw
+    max-height: 14vw
+    width: auto
 
 .rating
     padding-top: 20px
@@ -74,6 +77,9 @@ a
 .rating > img
     width: auto
     height: 30px
+
+.arrow
+  cursor: pointer
 
 .like
   filter: invert(61%) sepia(51%) saturate(671%) hue-rotate(88deg) brightness(98%) contrast(90%)
