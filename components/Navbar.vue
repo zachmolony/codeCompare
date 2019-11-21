@@ -52,13 +52,8 @@
 
         <div class="navbar-end">
           <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a class="button is-light">
-                Log in
-              </a>
+            <div class="buttons">              
+              <img class="signin" src="https://raw.githubusercontent.com/react-native-community/react-native-google-signin/HEAD/img/signin-button.png" alt="">
             </div>
           </div>
         </div>
@@ -93,4 +88,7 @@ export default {
 h1
     text-decoration: none !important
 
+.signin
+  min-height: 2.8em
+  transform: translateY(-4px)
 </style>
